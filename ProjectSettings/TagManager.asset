@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Ground
+  - GroundParent
+  - UpperGround
+  - MidGround
+  - LowerGround
+  - Enemy
+  - coins
+  - Mech
+  - StartRun
+  - Magnet
+  - Shield
+  - Gun
+  - Bullet
+  - ScoreDoubler
+  - powerUpShine
+  - Support
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - groundLayer
+  - EnemyBots
+  - player
+  - coin
+  - Mech
+  - StartRun
+  - Magnet
+  - Shield
+  - Gun
+  - Bullet
+  - ScoreDoubler
+  - PowerUpShine
+  - Support
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 104303347
+    locked: 0
+  - name: DustTrail
+    uniqueID: 3819858049
+    locked: 0
+  m_RenderingLayers:
+  - Default
