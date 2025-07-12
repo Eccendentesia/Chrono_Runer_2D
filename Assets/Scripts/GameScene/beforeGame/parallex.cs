@@ -21,7 +21,7 @@ public class MaterialParallaxScroller : MonoBehaviour
 
     private int nextScoreThreshold = 500;      // First speed-up happens at 500
     public float speedMultiplier = 0.09f;       // Speed increase factor
-    public int scoreStep = 200;                // Every X points
+    public int scoreStep = 600;                // Every X points
 
     void Start()
     {

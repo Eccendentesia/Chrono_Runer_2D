@@ -74,9 +74,10 @@ public class MainMenuButtons : MonoBehaviour
     private void loadGameScene()
     {
        
-        SceneManager.LoadScene("GameScene");
+      
         MainMenu.SetActive(false);
-       
+        LoadingScene.Instance.LoadSceneByName("GameScene"); 
+
     }
 
 }

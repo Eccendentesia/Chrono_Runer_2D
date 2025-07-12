@@ -8,7 +8,7 @@ public class MicroWaveBot: MonoBehaviour
     [SerializeField] private Collider2D cr;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speedAdder = 2f ;
-    private int speedThreshold = 200;
+    private int speedThreshold = 250;
    
     void Start()
     {

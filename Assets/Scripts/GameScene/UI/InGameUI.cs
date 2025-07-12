@@ -161,8 +161,14 @@ public class InGameUI : MonoBehaviour
         yield return new WaitForSeconds(lostPanelDisplayTimer);
         LostPanel.SetActive(true);
         Time.timeScale = 0f;
+        StartCoroutine(ShowReviveAdAfterUI());
     }
 
+    private IEnumerator ShowReviveAdAfterUI()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);  // Let LostPanel show first
+        CrazyAdManager.Instance.ShowRewardedAdToRevive();
+    }
     private void SaveHighScore()
     {
         if (score > PlayerPrefs.GetInt("HighScore", 0))
@@ -174,7 +180,7 @@ public class InGameUI : MonoBehaviour
 
     public void loadMainMenu()
     {
-
+        ShowReviveAdAfterUI(); 
         Time.timeScale = 1f;
         MainMenuButtons.Instance.MainMenu.SetActive(true);
         SceneManager.LoadScene("MainMenu");

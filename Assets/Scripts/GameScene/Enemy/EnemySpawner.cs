@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float spawnIntervalDecrease = 0.5f;
     [SerializeField] private int scoreStepToIncrease = 500;
     [SerializeField] private float destroyTime = 20f;
-
+    [SerializeField] private float spawnPosCount; 
     private float currentSpawnInterval;
     private float spawnTimer;
     private int nextScoreThreshold;
@@ -46,15 +46,19 @@ public class EnemySpawner : MonoBehaviour
         if (InGameUI.Instance != null && InGameUI.Instance.score >= nextScoreThreshold)
         {
             currentSpawnInterval = Mathf.Max(minSpawnInterval, currentSpawnInterval - spawnIntervalDecrease);
+            if(spawnPosCount <= 6)
+            {
+                spawnPosCount += 1;
+            }
             nextScoreThreshold += scoreStepToIncrease;
         }
     }
 
     private void SpawnEnemiesAtAllPoints()
     {
-        foreach (var spawnPoint in spawnPoints)
+        for(int i = 0; i < spawnPosCount; i++)        
         {
-            SpawnEnemyAtPoint(spawnPoint);
+            SpawnEnemyAtPoint(spawnPoints[i].gameObject);
         }
     }
 
